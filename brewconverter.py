@@ -1,9 +1,9 @@
 import mmap
 
-brewFile = ("BrewTest.rb")
+brew_file = ("BrewTest.rb")
 
 
-def check_If_Brew_File():
+def check_if_brew_file():
     with open('BrewTest.rb') as file, \
             mmap.mmap(file.fileno(), 0, access=mmap.ACCESS_READ) as s:
         if s.find(b'class') != -1:  # TODO: Perhaps improve the checks ?
